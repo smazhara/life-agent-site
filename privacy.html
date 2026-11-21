@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy policy - Life Agent</title><link rel="stylesheet" href="style.css"></head>
+<body><nav><a href="./">Home</a><a href="privacy.html">Privacy policy</a></nav>
+<main>
+<h1>Privacy policy</h1>
+<p class="muted">Life Agent &middot; Last updated: 2026-11-21</p>
+<p>Life Agent is a private application run by one household for its own use. Only the account holders who
+connect their own Google accounts to it are users. This page describes the Google data it accesses and what
+it does with it.</p>
+
+<h2>Google data accessed</h2>
+<ul>
+<li><strong>Gmail, read-only</strong> (<code>gmail.readonly</code>): the content and metadata of the connected user's messages,
+used to find bills, receipts, appointments and messages that need a reply.</li>
+<li><strong>Gmail, modify</strong> (<code>gmail.modify</code>): applying labels, archiving or trashing messages, and creating
+reply drafts. Drafts are addressed only to the original sender and are left for a person to review and send. The only
+mail the application sends itself is a daily summary to the household's own addresses; it does not send mail to anyone else.</li>
+<li><strong>Google Calendar</strong>: creating events on one dedicated household calendar.</li>
+</ul>
+<p>Read-only and modify access use two separate grants held by two separate processes, so the component that reads mail cannot change it.
+The component that changes mail can only perform a fixed list of operations and never sees raw message text.</p>
+
+<h2>How the data is used</h2>
+<p>Data is used only to provide the features above to the account holder. It is not used for advertising, sold,
+or shared with anyone outside the household.</p>
+<p>The use and transfer of information received from Google APIs adheres to the
+<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+including the Limited Use requirements.</p>
+
+<h2>Where it is stored and who else sees it</h2>
+<ul>
+<li>Extracted facts (such as bill amounts and due dates) and message metadata are stored in a database on a private server in the account holder's home.</li>
+<li>To classify and summarize messages, relevant message text is sent to Anthropic, the provider of the Claude AI models, for
+processing. It is sent only for that purpose.</li>
+<li>No other third party receives the data.</li>
+</ul>
+
+<h2>Retention and deletion</h2>
+<p>Data stays on the household's server until the account holder deletes it. Access can be revoked at any time at
+<a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>; the application then
+stops reading that account. To have stored data deleted, contact the address below.</p>
+
+<h2>Security</h2>
+<p>The application is reachable only on a private network, OAuth tokens are stored on the private server, and changes
+to mail and calendars go through a fixed, logged list of operations.</p>
+
+<h2>Contact</h2>
+<p>Questions about this policy, or requests to delete stored data: open an issue at
+<a href="https://github.com/smazhara/life-agent-site/issues">github.com/smazhara/life-agent-site/issues</a>.</p>
+<footer>Life Agent is a personal project, not affiliated with Google.</footer>
+</main></body></html>
